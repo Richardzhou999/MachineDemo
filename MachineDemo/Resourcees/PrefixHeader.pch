@@ -1,0 +1,141 @@
+//
+//  PrefixHeader.pch
+//  MachineDemo
+//
+//  Created by 吕飞雄 on 2020/3/17.
+//  Copyright © 2020 吕飞雄. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#import "Masonry.h"
+
+#import "Classy.h"
+#import "MJRefresh.h"
+#import "JKCategories.h"
+
+
+
+#import "UIImageView+WebCache.h"
+#import "UIScrollView+EmptyDataSet.h"
+//#import "LYURLRouter.h"
+//#import "MGJRouter.h"
+#import "AhaGesturePasswordView.h"
+//#import "TXBaseViewController.h" //提现 基础控制器
+//#import "UIView+YFLayoutContrains.h"
+//#import "UILabel+TxButton.h"
+//#import "UILabel+TxLabel.h"
+// 引入JPush功能所需头文件
+//#import "JPUSHService.h"
+// iOS10注册APNs所需头文件
+
+
+
+#ifdef NSFoundationVersionNumber_iOS_9_x_Max
+#import <UserNotifications/UserNotifications.h>
+
+#endif
+
+//常用宏
+#define KMainScreenWidth   [[UIScreen mainScreen] bounds].size.width
+#define KMainScreenHeigth  [[UIScreen mainScreen] bounds].size.height
+#define KWidth_scale       [[UIScreen mainScreen] bounds].size.width/375.0
+#define KHeight_scale      (KMainScreenHeigth == 812.0 ? 667.0/667.0 : KMainScreenHeigth/667.0) //因为iphoneX宽度与iphone8一样,但高度却比iphone8高
+#define SafeAreaTopHeight (KMainScreenHeigth == 812.0 ? 88 : 64) //iphoneX 导航栏高度
+#define SafeAreaBottomHeight (KMainScreenHeigth == 812.0 ? 83 : 49) //iphoneX tabar高度
+#define KUserDefaults      [NSUserDefaults standardUserDefaults]
+
+#define NETWORKString @"矮哟! 要检查网络啦~~"
+#define EmptyData     @"暂无数据"
+#define REQUESTDEFAIL @"请求出错"
+
+//提现搜索历史记录
+#define tx_store_history @"tx_store_history"
+#define tx_order_history @"tx_order_history"
+
+//数据库
+#define tx_sqliteName @"TxDbSqlite"
+
+//测试https://yyb.asit.me
+//正式https://iot.universal-space.cn
+//#define BaseUrl @"https://iot.universal-space.cn"
+//#define BaseUrl @"http://10.1.5.90:3003"
+//#define BaseUrl @"http://api.yyb.shiyugame.com:8003"
+
+//打包发布上APP Store时候 必须NO
+//是否测试打包
+#define isDebugMode YES
+
+
+//提现测试
+
+#define TX_Switch NO
+#define TX_changed_token NO
+#define TX_hardCode NO
+#define TX_test_token @"S9O0uH2WYiK9NHuqTctXSRbnRx89OraJdgEiuFX4vhVAIxBf5vJAm8h3ZSw6A4WS"
+
+#define TX_test_user @"shiyutest"
+#define TX_test_pwd @"123456"
+
+#define Alipay        @"alipay"
+#define GesturePsd    @"gesturePassword"//手势密码
+#define FingerPrint   @"fingerPrint"
+#define YYBRegistrationID  @"registrationId"//pushId
+
+//用户登录状态键值
+#define YYBStoreToken    @"token"    //token
+#define YYBStoreAvatar   @"avatar"   //avatar头像
+#define YYBStoreNick     @"nickName" //昵称
+#define YYBStoreUserId   @"userId"   //用户id
+#define YYBStoreLogo     @"logo"     //登录界面的logo
+#define YYBStoreName     @"name"     //登录界面的门店名称
+
+//保存商家上一次成功登录的账号和密码
+#define Account   @"account"
+#define Password  @"password"
+
+//游艺宝设计规范
+#define Color_Orange      @"#FFC107"
+#define Color_Blue        @"#3CA6FE"
+#define Color_Pink        @"#FF686B"
+#define Color_Black_one   @"#4D4D4D"
+#define Color_Black_two   @"#707070"
+#define Color_Black_three @"#969696"
+#define Color_Line        @"#E4E4E4"    //线条颜色
+#define Color_Bottom      @"#F2F2F2"    //底部颜色
+
+#define Color_tx_tableBg @"#F6FBFC"
+#define Color_tx_selectBg @"#F7FCFD"
+#define Color_tx_DetailBtn @"#009CD8"
+#define Color_tx_CheckContentBg @"#FAFBFC"
+#define Color_tx_CheckBg @"#FEEEB2"
+#define Color_tx_gray @"#666666"
+#define Color_tx_lightGray @"#999999"
+#define Color_tx_yellow @"#fec009"
+#define Color_tx_red @"#ff6565"
+#define Color_tx_green @"#6ed08a"
+#define Color_tx_blue @"#5b72fe"
+#define Color_tx_black @"#333333"
+#define COlor_tx_KeyWord @"#FEEEB2"
+
+
+#define FONT_SUPER        18.0f
+#define FONT_BIG          15.0f
+#define FONT_MIDDLE       12.0f
+#define FONT_SMALL        10.0f
+
+
+#define NULLImage     @"ic_default_image"
+#define NuLLImage2    @"ic_default_image2"
+
+//Helpers
+//#import "YYBRefreshHeader.h"
+//#import "YYBRefreshFooter.h"
+//#import "GetDeviceModel.h"
+//#import "NSString+EasyExtend.h"
+//#import "NSString+Extension_NSString.h"
+//
+//#import "QTool.h"
+#endif

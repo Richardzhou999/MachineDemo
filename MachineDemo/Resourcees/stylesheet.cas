@@ -1,0 +1,22 @@
+//TODO flesh out example
+
+UILabel.loginTitle {
+text-color: #969696
+font: 14
+}
+
+UIBtton.yellow{
+    background-color[state: highlighted] : #FFD75E
+    background-color[state: default] : #FFC107
+    title-color[state: normal] : #FFFFFF
+    title-color[state:highlighted]: #FFFFFF
+    title-label @{
+    font: 16
+    }
+    layer @{
+    masks-to-bounds YES
+    corner-radius 3
+    }
+    
+    
+}
